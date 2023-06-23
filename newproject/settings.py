@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -125,3 +126,17 @@ LOGIN_REDIRECT_URL = '/profile'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
+EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'shahabas.vellakkattil@gmail.com'
+EMAIL_HOST_PASSWORD = 'shahabas@7560'
+EMAIL_USE_TLS = True
+
+
+RAZOR_KEY_ID = "rzp_test_qytOTG6haXsHLd"
+RAZOR_KEY_SECRET = "hD2G5hSRZJOJNgPYh3BlBMNJ"
